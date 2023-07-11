@@ -1,0 +1,12 @@
+<h2>LISTADO DE PERSONAS</h2>
+<hr>
+<ul *ngIf="getAllPerson().length>0;else noElements" class="list-group">
+  <li class="list-group-item d-flex justify-content-around" *ngFor="let person of getAllPerson()">
+    <label> {{ person.name }} - {{ person.cedula }} </label>
+    <button class="btn btn-danger" (click)="deletePerson(person)"> X </button>
+  </li>
+</ul>
+
+<ng-template #noElements>
+  <p>No existen elementos en la lista</p>
+</ng-template>

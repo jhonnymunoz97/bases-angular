@@ -1,0 +1,15 @@
+<h2>Agregar Persona</h2>
+<hr>
+<form class="d-flex flex-column" (ngSubmit)="addPerson()">
+  <div class="d-flex justify-content-around">
+    <label for="name">Nombre:</label>
+    <input class="mt-1" [(ngModel)]="person.name" name="name" id="name" required>
+  </div>
+  <p *ngIf="flagName" class="text-danger">El nombre es requerido</p>
+  <div class="d-flex justify-content-around">
+    <label for="cedula">Cédula:</label>
+    <input class="mt-1" [(ngModel)]="person.cedula" name="cedula" id="cedula" required>
+  </div>
+  <p *ngIf="flagCedula" class="text-danger">La cedula es requerido</p>
+  <button class="mt-1 btn btn-success" type="submit">Agregar</button>
+</form>

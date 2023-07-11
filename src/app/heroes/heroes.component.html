@@ -1,0 +1,9 @@
+<div class="container mt-1">
+  <h2> {{ title | uppercase }} </h2>
+  <label *ngIf="heroeDelete; else noDeleteHeore" class="text-danger">HEROE ELIMINADO: {{heroeDelete | uppercase }}</label>
+  <ng-template #noDeleteHeore> NO SE HA ELIMINADO NINGÚN HÉROE </ng-template>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let heroe of heroes"> {{ heroe }} </li>
+  </ul>
+  <button *ngIf="heroes.length > 0" class="btn btn-danger mt-1" (click)="deleteHeroe()"> Eliminar Heroe </button>
+</div>

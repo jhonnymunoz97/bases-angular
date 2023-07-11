@@ -1,0 +1,12 @@
+<div class="container mt-3">
+  <h1> {{ title | uppercase }} </h1>
+  <button
+    class="btn btn-danger"
+    (click)="countDecrease()"
+    >-</button>
+  <label class="ml-2 mx-2"> {{ count }} </label>
+  <button
+    class="btn btn-primary "
+    (click)="countIncrement()"
+  >+</button>
+</div>
